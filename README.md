@@ -41,8 +41,10 @@ apb-slave-uvm-verification/
 │   ├── apb_base_test.sv
 │   ├── apb_test.sv            # apb_random_test, apb_wr_rd_test
 │   └── apb_top.sv             # package + tb_top
-├── sim/                       # run scripts (to be added)
-└── README.md
+├── sim/             
+│   ├── Makefile                
+|   ├── build.flist
+──────────────────────────
 ```
 
 ## Testbench Architecture
