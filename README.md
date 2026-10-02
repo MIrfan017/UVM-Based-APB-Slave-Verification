@@ -74,19 +74,6 @@ Test -> Sequence -> Sequencer -> Driver -> [ DUT ] -> Monitor -> Scoreboard
 - [ ] Run scripts (Makefile / VCS command)
 - [ ] Regression results
 
-## How to Run
-
-Example with VCS (adjust to your setup):
-
-```
-vcs -sverilog -full64 -timescale=1ns/1ps -ntb_opts uvm-1.2 \
-    rtl/design.sv tb/apb_interface.sv tb/apb_top.sv
-
-./simv +UVM_TESTNAME=apb_wr_rd_test
-```
-
-Expected: scoreboard summary shows 0 failures and a `TEST PASS` banner.
-
 ## Known Notes
 - Scoreboard parameters (`BASE_ADDR`, `MEM_SIZE_B`, `DATA_W`) are hardcoded to match `apb_top.sv`.
 - Bytes that were never written are not compared (DUT memory is uninitialized).
